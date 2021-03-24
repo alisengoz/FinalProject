@@ -31,7 +31,7 @@ namespace Business.Concrete
 
         public IDataResult<List<Product>> GetAll()
         {
-            return new DataResult(_productDal.GetAll());
+            return new SuccessDataResult<List<Product>>(_productDal.GetAll(),true,"Ürünler listelendi");
         }
 
         public List<Product> GetAllByCategoryId(int id)
